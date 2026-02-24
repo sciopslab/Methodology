@@ -41,4 +41,4 @@ Unlike standard synthetic tests, the proposed **RT-STALKER (Layered Architectura
 2.  **Architectural Correlation:** Establishing a strict correlation between the microarchitecture (**Cortex-A53/55 vs. A73/76**) and the resulting system determinism under extreme synthetic loads.
 
 ---
-*Next: [Methodology and Experimental Design](./Methodology_Design.md)*
+*Next: [Kernel Optimization](./Kernel_Optimization.md)*
