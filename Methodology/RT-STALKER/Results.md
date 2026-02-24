@@ -17,7 +17,7 @@ As part of this research, a **Unified Determinism Scale** was developed and test
 
 The chart below integrates the results of all testing stages. The vertical axis represents absolute latency in microseconds. The area below the **red dashed line (70 μs)** defines the safe operating zone for high-speed robotic systems. Platforms with **Max Latency** exceeding this zone are classified as **Soft RT** solutions.
 
-![RT-STALKER Mission: Stress Resilience](./rt_linux_final_stress.png)
+![RT-STALKER Mission: Stress Resilience](./rt_final_results.png)
 
 > **Note to Researchers:** You can find the Gnuplot source script for this chart in the [Assets/Scripts](../../Assets/Scripts/plot_latency.gp) directory to reproduce this visualization with your own data.
 
