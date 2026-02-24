@@ -41,4 +41,13 @@ To validate the **RT-STALKER** protocol, we executed a three-stage experimental 
 *   **Hard RT Criterion:** If **Max Latency remains < 70 μs** under these conditions, the platform is certified for critical control loops.
 
 ---
+
+## Hard Real-Time (Hard RT) Criterion
+**For the purposes of this research, an industrial evaluation standard has been established:**
+*   **The Threshold:** If, under extreme load conditions ("Stage 3: Hardcore Stress"), the Max Latency does not exceed the 70-microsecond (70 μs) limit, the system is certified as suitable for Hard Real-Time tasks.
+*   **The Penalty:** Any excursion beyond this threshold is classified as a loss of determinism, which is unacceptable for critical control loops and mission-critical automated systems.
+
+
 *Next: [Comparative Results & The 2μs Record](./Results.md)*
+
+
