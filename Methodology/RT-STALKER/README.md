@@ -34,6 +34,7 @@ Our benchmark is the **Radxa Cube A7Z (Cortex-A76)**. It has proven that with su
 4.  **[Hardware & Build Setup](./Hardware_Setup.md)** — Native Build station and Target SoCs.
 5.  **[Experimental Design](./Experimental_Design.md)** — Detailed 3-stage execution protocol.
 6.  **[Experimental Results](./Results.md)** — **Comparative analysis and the 2 μs World Record.**
+7.  **[Outro](./Outro.md)** — **Conclusion.**
 
 ---
 *SciOpsLab: Where Physics meets Engineering.*
