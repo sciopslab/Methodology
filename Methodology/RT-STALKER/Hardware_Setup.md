@@ -39,4 +39,4 @@ Our build environment is designed to generate optimized images for a wide spectr
 This systemic approach guarantees that every tested kernel carries an **identical set of RT-optimizations**. This ensures that our comparative architectural study remains objective, isolating the physical performance of the silicon from software configuration variances.
 
 ---
-*Next: [Experimental Results & Data Visualization](./Results.md)*
+*Next: [Experimental Design](./Experimental_Design.md)*
