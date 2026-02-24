@@ -30,8 +30,10 @@ Our benchmark is the **Radxa Cube A7Z (Cortex-A76)**. It has proven that with su
 
 1.  **[Introduction & Context](./Introduction.md)** — The era of Zero-platforms and Mainline RT.
 2.  **[Kernel Surgery Guide](./Kernel_Optimization.md)** — 6 blocks of deep architectural optimization.
-3.  **[Testing Protocol](./Testing_Protocol.md)** — From Vanilla Baseline to Hardcore Stress.
-4.  **[Experimental Results](./Results.md)** — Comparative analysis of A53, A55, A73, and A76.
+3.  **[Measurement Tools](./Measurement_Tools.md)** — Metrology with `cyclictest` and `stress-ng`.
+4.  **[Hardware & Build Setup](./Hardware_Setup.md)** — Native Build station and Target SoCs.
+5.  **[Experimental Design](./Experimental_Design.md)** — Detailed 3-stage execution protocol.
+6.  **[Experimental Results](./Results.md)** — **Comparative analysis and the 2 μs World Record.**
 
 ---
 *SciOpsLab: Where Physics meets Engineering.*
