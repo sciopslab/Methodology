@@ -1,7 +1,7 @@
 # 🦅 RT-STALKER Methodology
 ### Layered Architectural Latency Sterilization Protocol
 
-**RT-STALKER** — это первая верифицированная методология движения **SciOps**, направленная на достижение субмикросекундного детерминизма на стандартных ARM-архитектурах.
+**RT-STALKER** is the first verified methodology of the **SciOps** movement, aimed at achieving sub-microsecond determinism on standard ARM architectures.
 
 ## 🔬 Core Stages
 1. **Vanilla Baseline:** Identifying the "Comb Effect" and scheduler chaos.
