@@ -23,4 +23,4 @@ Maintenance of the structural integrity of the latency profile.
 Experimental proof that the hardware-software synergy (**Optimized Kernel + Core Isolation**) creates **immunity to external computational loads**. This stage is the "killer feature" of the research, demonstrating the superiority of deep architectural tuning over the generic use of RT patches.
 
 ---
-*Next: [Measurement Tools & Experimental Setup](./Experimental_Setup.md)*
+*Next: [Measurement Tools](./Measurement_Tools.md)*
