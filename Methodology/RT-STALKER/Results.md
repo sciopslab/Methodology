@@ -45,6 +45,36 @@ The **Radxa Cube A7Z (Cortex-A76)** has set a new benchmark. By achieving a cons
 
 ---
 
+## 🏛️ Classification and Industrial Application
+
+Based on the multi-factor analysis conducted via the **RT-STALKER** protocol, the investigated ARM systems have been classified by their suitability for various classes of industrial automation and robotics tasks.
+
+### 1. Raspberry Pi Zero 2 W (BCM2710) — "Legacy & Education"
+Despite its status as a de-facto industrial standard, this platform showed the highest sensitivity to load (**Max 228 μs**).
+*   **Recommendation:** Soft Real-Time (Soft RT) systems.
+*   **Scenarios:** Sensor monitoring, non-critical building automation, educational testbeds.
+*   **Control Limit:** Stable control loops up to **2–5 kHz** (provided there are no heavy network tasks).
+
+### 2. Orange Pi Zero 2W (Allwinner H618) — "Entry-Level Hard RT"
+Demonstrated phenomenal baseline determinism (**Avg 15 μs**), but shares the same data bus vulnerability as the RPi under extreme stress.
+*   **Recommendation:** Budget CNC systems and 3D printing.
+*   **Scenarios:** Single-axis controllers, simple manipulators, data acquisition systems.
+*   **Control Limit:** Ultra-high-speed tasks (loops up to **10–20 kHz**) only in **"sterile"** conditions (no background CPU/GPU load).
+
+### 3. Radxa Zero 2 Pro (Amlogic A311D) — "Industrial Motion Control"
+Experimentally confirmed: the **A73** architecture on the 6.18-RT kernel maintains average latency **< 10 μs** even under total system bus resource exhaustion.
+*   **Recommendation:** High-load industrial robots and multi-axis motion controllers.
+*   **Scenarios:** Motion Control systems, Autonomous Mobile Robots (AMR), **EtherCAT Masters**.
+*   **Control Limit:** Guaranteed control loops up to **40–50 kHz** with full protection against background computational processes.
+
+### 4. Radxa Cube A7Z (Allwinner A733) — "The Absolute Record / Edge-AI"
+The absolute leader of the study. Combined with the RT-STALKER sterilization methodology, the platform reached the architectural physical limit of **2 μs**.
+*   **Recommendation:** Precision robotics and **Edge-AI** enabled systems.
+*   **Scenarios:** UAVs (drones) with Computer Vision, high-speed sorting lines, medical robotics.
+*   **Control Limit:** Reference-grade determinism for loops up to **100 kHz**. The unique independence of **A76** and **A55** clusters allows heavy neural network tasks to run in parallel with the precision control loop.
+
+---
+
 ## 🔍 Detailed Platform Discussions
 
 1.  **[BCM2710 (RPi Zero 2 W)](./Platforms/BCM2710_Discussion.md)** — Legacy bus limitations.
