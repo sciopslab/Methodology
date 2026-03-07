@@ -1,4 +1,4 @@
-# White Paper: Layered Architectural Latency Sterilization Protocol (RT-STALKER)
+# Layered Architectural Latency Sterilization Protocol (RT-STALKER)
 
 **Authors:** SciOpsLab Community  
 **Date:** February 2026  
