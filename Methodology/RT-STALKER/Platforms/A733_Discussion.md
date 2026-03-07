@@ -23,6 +23,43 @@ The **Radxa Cube** is the technological flagship of this research. Its SoC, the 
 
 ---
 
+## 🔬 Stage 2: "Hardcore Stress" — Cluster Vulnerability Analysis
+
+While the A76 cluster demonstrated absolute resilience, the **Cortex-A55** cluster (LITTLE) revealed the physical limits of energy-efficient architectures under extreme resource contention.
+
+### Raw Data: A55 Cluster under "Noisy Neighbor" Attack
+*   **Target Cores:** 6x Cortex-A55 (Isolated for RT)
+*   **Service Cores:** 2x Cortex-A76 (Under `stress-ng` attack)
+*   **Total Samples:** 6,000,000
+*   **Avg Latency:** 7–10 μs
+*   **Max Latency:** **740 μs (Critical Failure)**
+*   **Overflows (>100 μs):** **14–25 events** per thread.
+
+### 📈 Stress Visualization
+![A733 Stress Results](../Assets/Images/radxa_a7z_stress1.png)
+
+### 🕵️ Evolutionary Comparison: Cortex-A53 vs. Cortex-A55
+
+The comparison between the legacy **A53 (BCM2710/H618)** and the modern **A55 (A733 LITTLE cluster)** provides a unique insight into ARM's architectural evolution:
+
+1.  **Baseline "Punctuality":** 
+    *   **A53:** Starts at 15–22 μs (Avg). 
+    *   **A55:** Starts at 5–7 μs (Avg). 
+    *   *Conclusion:* The A55 is inherently twice as fast in interrupt entry due to the improved ARMv8.2-A pipeline and better GIC integration.
+
+2.  **Stress Resilience:** 
+    *   **A53:** Latency explodes to **228 μs** on the BCM2710.
+    *   **A55:** Latency spikes even higher, reaching **740 μs** on the A733 under A76-driven stress.
+    *   *Observation:* While the A55 is faster in "sterile" conditions, its **dependency on the shared system bus** and L3 cache makes it highly vulnerable when a "Big" neighbor (A76) saturates the interconnect.
+
+3.  **The "L3 Cache Poisoning" Effect:** 
+    *   The A55 cluster in the A733 SoC shares the DynamIQ Shared Unit (DSU). When the A76 cores generate massive memory traffic, the A55 cores suffer from **L3 cache eviction**, causing the catastrophic 740 μs spikes.
+
+## 🧪 Scientific Verdict on A55
+The Cortex-A55 is a significant upgrade over the A53 for **Soft RT** tasks, offering better average response times. However, for **Hard RT**, it remains unreliable under heavy bus load. In a SciOps-certified system (like the Radxa Cube), the A55 cluster must be used exclusively as a **"Service Shield"** to protect the A76 cores.
+
+---
+
 ## 🔬 Stage 3: "Hardcore Stress" (The Resilience Masterclass)
 *Objective: Verify the immunity of the A76 cluster while the A55 cluster is under 100% synthetic load.*
 
@@ -39,7 +76,7 @@ In this stage, we utilize the 6x A55 cores as a "service shield," absorbing all 
 | **Overflows** | **14–25 (Failed RT)** | **0 (Perfect Compliance)** |
 
 ### 📈 Stress Visualization
-![A733 Stress Results](../Assets/Images/radxa_a7z_stress.png)
+![A733 Stress Results](../Assets/Images/radxa_a7z_stress2.png)
 
 ### 🕵️ Architectural Analysis: Why A76 Stays "Cold" Under Fire
 The Radxa Cube's performance is a textbook case of architectural immunity. While the A55 cores suffered from massive latency spikes (up to 740 μs) due to memory bus saturation, the **A76 cores remained deterministic**:
