@@ -51,6 +51,6 @@ The Allwinner H618 is the **absolute champion of the budget segment**. It is the
 ---
 ### 🔗 Artifacts
 *   **Kernel:** `6.18.13-RT`
-*   **Raw Log (Stress):** [h618_stress.log](../../Artifacts/Logs/h618_stress.log)
+*   **Raw Log (Stress):** [h618_stress.log](../Artifacts/Logs/h618_stress.log)
 
 [Back to Results](../Results.md)
