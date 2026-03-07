@@ -45,6 +45,6 @@ The Raspberry Pi Zero 2 W **fails the Hard RT certification (70 μs threshold)**
 ---
 ### 🔗 Artifacts
 *   **Kernel:** `6.18.12-RT`
-*   **Raw Log (Stress):** [bcm2710_stress.log](Methodology/RT-STALKER/Artifacts/Logs/bcm2710_stress.log)
+*   **Raw Log (Stress):** [bcm2710_stress.log](../Artifacts/Logs/bcm2710_stress.log)
 
 [Back to Results](../Results.md)
