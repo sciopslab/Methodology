@@ -47,6 +47,6 @@ The Amlogic A311D is an **Industrial-Grade RT-Platform**.
 ---
 ### 🔗 Artifacts
 *   **Kernel:** `6.18.13-RT`
-*   **Raw Logs:** [A311D_Baseline.log](../../Artifacts/Logs/A311D_Baseline.log) | [A311D_Stress.log](../../Artifacts/Logs/A311D_Stress.log)
+*   **Raw Logs:** [A311D_Baseline.log](../Artifacts/Logs/A311D_Baseline.log) | [A311D_Stress.log](../Artifacts/Logs/A311D_Stress.log)
 
 [Back to Results](../Results.md)
